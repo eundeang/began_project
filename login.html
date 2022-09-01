@@ -28,6 +28,48 @@
 	<div>
 	<a href="https://eundeang.github.io/began_project/signup.html"><input type="button" value="회원가입"></a>
 	<input type="button" value="로그인" onclick="login();">
+		<!-- 눌렀을 때 login() 함수를 실행. 이 함수는 javascript에서 구현할 것이다. -->
 	</div>
 </body>	
 </html>
+
+<script>
+	function login()
+	{
+		var id = document.querySelector('#id');
+		var pw = document.querySelector('#pw');
+		
+		if(id.value == "" || pw.value == ""){
+		}
+		else {
+			location.href = 'https://eundeang.github.io/began_project';
+		}
+	}
+	
+	function back()
+	{
+		history.go(-1);
+	}
+	
+	function create_id()
+	{
+		var id = document.querySelector('#id');
+		var pw = document.querySelector('#pw');
+		var r_pw = document.querySelector('#r_pw');
+		
+		if(id.value == "" || pw.value == "" || r_pw.value == "")
+		{
+			alert("회원가입을 할 수 없습니다.")
+		}
+		else
+		{
+			if(pw.value !== r_pw.value)
+			{
+				alert("비밀번호를 확인해주세요.")
+			}
+			else
+			{
+				location.href = 'https://eundeang.github.io/began_project/login.html';
+			}
+	}
+</script>
